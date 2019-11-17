@@ -1,3 +1,4 @@
+
 class Eto:
     year = 0
     name = ''
@@ -17,13 +18,12 @@ def eto_year():
     year_len = len(year_str)
     year = int(year_str)
 
-    if year > 2020 and year_len != 4:
+    if year > 2020 or year_len != 4:
         print('あああああ')
         quit()
 
     else:
         return year
-
 
 
 def eto():
@@ -41,10 +41,12 @@ def eto():
     e = Eto(year, name, eto_name)
     ana = e.eto()
 
+    tosi = 2019 - year
+    print(tosi)
+
+
     return ana
 
 
 eto()
-
-
 
