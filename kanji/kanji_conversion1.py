@@ -13,18 +13,12 @@ kanji = {
     '千' : 1000,
 }
 
-
 def kanji_conversion(kanji_suu):
-
     answer = []
-
-    kanji_suu_list = list(kanji_suu)
-
-    for con in kanji_suu_list:
-
-        aaa = kanji[con]
-        answer.append(aaa)
-
+    kanli = list(kanji_suu)
+    for con in kanli:
+        ref = kanji[con]
+        answer.append(ref)
     print(answer)
 
     last = None
@@ -57,5 +51,4 @@ def kanji_conversion(kanji_suu):
 
         accum += num
     accum += answer[-1]
-
     print(accum)

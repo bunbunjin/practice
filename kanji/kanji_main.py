@@ -1,16 +1,10 @@
-#ここにファイル
 from kanji_conversion1 import kanji_conversion
 
-
 kanji_suu = input('漢数字を入力してください')
-kanji_jud = kanji_suu.isdigit()
+chars = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '百', '千']
 
-
-
-if kanji_jud == False:
-    kanji_conversion(kanji_suu)
-    #print('ここに結果が出る')
-
+if any(c not in chars for c in kanji_suu):
+    raise ValueError('Unknown kanji was input')
 
 else:
-    print('漢数字でお願いします。')
+    kanji_conversion(kanji_suu)
