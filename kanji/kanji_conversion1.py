@@ -14,13 +14,7 @@ kanji = {
 }
 
 def kanji_conversion(kanji_suu):
-    answer = []
-    kanli = list(kanji_suu)
-    for con in kanli:
-        ref = kanji[con]
-        answer.append(ref)
-    print(answer)
-
+    answer = [kanji[con] for con in kanji_suu]
     last = None
     accum = 0
     for digit in answer[:-1]:
