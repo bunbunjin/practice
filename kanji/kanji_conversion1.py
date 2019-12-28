@@ -11,6 +11,8 @@ kanji = {
     '十' : 10,
     '百' : 100,
     '千' : 1000,
+    '万' : 10000,
+    '億' : 100000000
 }
 
 def kanji_conversion(kanji_suu):
@@ -19,7 +21,21 @@ def kanji_conversion(kanji_suu):
     accum = 0
     for digit in answer[:-1]:
         num = 0
-        if digit == 1000:
+        if digit == 100000000:
+            if last is None:
+                num = 100000000
+            else:
+                num = 100000000 * last
+                last = None
+
+        elif digit == 10000:
+            if last is None:
+                num = 10000 * 1
+            else:
+                num = 10000 * last
+                last = None
+
+        elif digit == 1000:
             if last is None:
                 num = 1000 * 1
             else:
@@ -44,5 +60,5 @@ def kanji_conversion(kanji_suu):
             last = digit
 
         accum += num
-    accum += answer[-1]
+        accum += answer[-1]
     print(accum)
