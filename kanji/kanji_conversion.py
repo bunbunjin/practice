@@ -15,7 +15,7 @@ kanji = {
     '億' : 100000000
 }
 
-def kanji_conversion(kanji_suu):
+def convert(kanji_suu):
     answer = [kanji[con] for con in kanji_suu]
     last = None
     accum = 0
