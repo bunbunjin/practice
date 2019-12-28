@@ -13,6 +13,5 @@ class Testkanji(unittest.TestCase):
         exclu = set(chars) ^ set(kanli)
         self.assertNotEqual(exclu, kanli)
 
-
 if __name__ == '__main__':
     unittest.main()
