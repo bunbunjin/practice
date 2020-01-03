@@ -61,5 +61,4 @@ def convert(kanji_suu):
 
         accum += num
     accum += answer[-1]
-    print(accum)
     return accum
