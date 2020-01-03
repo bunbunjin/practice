@@ -19,7 +19,7 @@ def convert(kanji_suu):
     answer = [kanji[con] for con in kanji_suu]
     last = None
     accum = 0
-    for digit in answer[:-1]:
+    for digit in answer:
         num = 0
         if digit == 100000000:
             if last is None:
@@ -60,6 +60,6 @@ def convert(kanji_suu):
             last = digit
 
         accum += num
-        accum += answer[-1]
+    accum += answer[-1]
+    print(accum)
     return accum
-
