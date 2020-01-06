@@ -8,4 +8,3 @@ if any(c not in chars for c in kanji_suu):
 
 else:
     convert(kanji_suu)
-
