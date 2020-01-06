@@ -7,5 +7,4 @@ if any(c not in chars for c in kanji_suu):
     raise ValueError('Unknown kanji was input')
 
 else:
-    kanji_conversion(kanji_suu)
-
+    convert(kanji_suu)
