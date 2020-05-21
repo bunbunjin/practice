@@ -1,5 +1,5 @@
 import unittest
-from kanji_conversion import convert
+from conversion import convert
 
 class Testkanji(unittest.TestCase):
     def test_convert_simple(self):
