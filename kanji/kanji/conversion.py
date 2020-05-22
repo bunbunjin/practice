@@ -1,20 +1,22 @@
 
 kanji = {
-    '一' : 1,
-    '二' : 2,
-    '三' : 3,
-    '四' : 4,
-    '五' : 5,
-    '六' : 6,
-    '七' : 7,
-    '八' : 8,
-    '九' : 9,
-    '十' : 10,
-    '百' : 100,
-    '千' : 1000,
-    '万' : 10000,
-    '億' : 100000000
+    '一': 1,
+    '二': 2,
+    '三': 3,
+    '四': 4,
+    '五': 5,
+    '六': 6,
+    '七': 7,
+    '八': 8,
+    '九': 9,
+    '十': 10,
+    '百': 100,
+    '千': 1000,
+    '万': 10000,
+    '億': 100000000
 }
+rank = [10, 100, 1000, 10000, 100000, 100000000]
+
 
 def convert(kanji_suu):
     answer = [kanji[con] for con in kanji_suu]
@@ -61,5 +63,12 @@ def convert(kanji_suu):
             last = digit
 
         accum += num
-    accum += answer[-1]
+
+    if answer[-1] in rank:
+        print(accum)
+
+    else:
+        accum += answer[-1]
+        print(accum)
+
     return accum
