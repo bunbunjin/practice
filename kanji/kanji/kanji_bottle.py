@@ -1,5 +1,5 @@
-from bottle import run, template, route, request
-from kanji_conversion import convert
+from bottle import run, route, template, request
+from conversion import convert
 
 chars = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '百', '千', '万', '億']
 
